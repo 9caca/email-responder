@@ -11,16 +11,11 @@ load_dotenv()
 
 # Configuração básica do logging
 logging.basicConfig(
-    level=logging.INFO,  # Define o nível de log (INFO, DEBUG, WARNING, ERROR, CRITICAL)
-    format='%(asctime)s - %(levelname)s - %(message)s',  # Formato do log
-    filename='email_auto_reply.log',  # Arquivo onde os logs serão salvos
-    filemode='a'  # Modo de abertura do arquivo ('a' para append, 'w' para sobrescrever)
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    filename='email_auto_reply.log',
+    filemode='a'
 )
-
-# Exemplo de uso:
-logging.info("Novo e-mail recebido de: %s | Assunto: %s", from_, subject)
-logging.info("Resposta enviada para: %s", to)
-logging.warning("Ignorando e-mail automático de: %s", from_)
 
 # Acessando as variáveis de ambiente
 smtp_server = os.getenv("SMTP_SERVER")
@@ -31,7 +26,7 @@ imap_server = os.getenv ("IMAP_SERVER")
 imap_port = os.getenv("IMAP_PORT")
 
 # Lista de termos que indicam e-mails automáticos
-AUTO_EMAIL_INDICATORS = ["no-reply", "noreply", "automatic", "do-not-reply"]
+AUTO_EMAIL_INDICATORS = ["no-reply", "noreply", "automatic", "do-not-reply", "no_reply"]
 
 def is_auto_email(from_):
     #Verifica se o e-mail é automático com base no remetente.
@@ -58,14 +53,17 @@ def check_and_reply_emails():
                         msg = email.message_from_bytes(response_part[1])
                         subject = msg['subject']
                         from_ = msg['from']
-                        print(f"Novo e-mail de: {from_} | Assunto: {subject}")
+                        
+                        # Log: E-mail recebido
+                        logging.info(f"Novo e-mail recebido de: {from_} | Assunto: {subject}")
 
                         # Verificar se o e-mail é automático
                         if is_auto_email(from_):
-                            print(f"Ignorando e-mail automático de: {from_}")
+                            logging.warning(f"Ignorando e-mail automático de: {from_} | Assunto: {subject}")
                         else:
                             # Enviar resposta automática
                             send_auto_reply(from_, subject)
+                            logging.info(f"Resposta enviada para: {from_}")
                         
                         # Marcar o e-mail como lido (opcional)
                         mail.store(num, '+FLAGS', '\\Seen')
@@ -73,7 +71,7 @@ def check_and_reply_emails():
         # Fechar conexão
         mail.logout()
     except Exception as e:
-        print("Erro ao conectar ao servidor de e-mail:", str(e))
+        logging.error(f"Erro ao conectar ao servidor de e-mail: {str(e)}")
 
 def send_auto_reply(to, subject):
     try:
