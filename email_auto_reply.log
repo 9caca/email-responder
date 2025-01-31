@@ -1,8 +1,31 @@
-2025-01-28 22:35:42,206 - INFO - Novo e-mail recebido de: Carlos Hiroshi Hayashi <carlos.hiroshi.hayashi@gmail.com> | Assunto: email teste de logging
-2025-01-28 22:35:45,301 - INFO - Resposta enviada para: Carlos Hiroshi Hayashi <carlos.hiroshi.hayashi@gmail.com>
-2025-01-28 22:37:04,241 - INFO - Novo e-mail recebido de: Carlos Hiroshi Hayashi <carlos.hiroshi.hayashi@gmail.com> | Assunto: no_reply teste resposta
-2025-01-28 22:37:07,695 - INFO - Resposta enviada para: Carlos Hiroshi Hayashi <carlos.hiroshi.hayashi@gmail.com>
-2025-01-28 22:39:16,113 - INFO - Novo e-mail recebido de: Carlos Hiroshi Hayashi <carlos.hiroshi.hayashi@gmail.com> | Assunto: no-reply teste
-2025-01-28 22:39:18,991 - INFO - Resposta enviada para: Carlos Hiroshi Hayashi <carlos.hiroshi.hayashi@gmail.com>
-2025-01-28 22:48:57,054 - INFO - Novo e-mail recebido de: Carlos Hiroshi Hayashi <carlos.hiroshi.hayashi@gmail.com> | Assunto: noreply automatic do-not-reply
-2025-01-28 22:49:00,018 - INFO - Resposta enviada para: Carlos Hiroshi Hayashi <carlos.hiroshi.hayashi@gmail.com>
+2025-01-28 22:35:42,206 - INFO - Novo e-mail recebido de: Carlos H H <xxx@gmail.com> | Assunto: email teste de logging
+2025-01-28 22:35:45,301 - INFO - Resposta enviada para: Carlos H H <xxx@gmail.com>
+2025-01-28 22:37:04,241 - INFO - Novo e-mail recebido de: Carlos H H <xxx@gmail.com> | Assunto: no_reply teste resposta
+2025-01-28 22:37:07,695 - INFO - Resposta enviada para: Carlos H H <xxx@gmail.com>
+2025-01-28 22:39:16,113 - INFO - Novo e-mail recebido de: Carlos H H <xxx@gmail.com> | Assunto: no-reply teste
+2025-01-28 22:39:18,991 - INFO - Resposta enviada para: Carlos H H <xxx@gmail.com>
+2025-01-28 22:48:57,054 - INFO - Novo e-mail recebido de: Carlos H H <xxx@gmail.com> | Assunto: noreply automatic do-not-reply
+2025-01-28 22:49:00,018 - INFO - Resposta enviada para: Carlos H H <xxx@gmail.com>
+2025-01-29 23:33:12,732 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-29 23:33:12,738 - INFO - Retrying request to /chat/completions in 0.385782 seconds
+2025-01-29 23:33:13,234 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-29 23:33:13,235 - INFO - Retrying request to /chat/completions in 0.953049 seconds
+2025-01-29 23:33:14,363 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 23:27:18,471 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 23:27:18,480 - INFO - Retrying request to /chat/completions in 0.443711 seconds
+2025-01-30 23:27:19,047 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 23:27:19,049 - INFO - Retrying request to /chat/completions in 0.775311 seconds
+2025-01-30 23:27:19,932 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 23:34:25,138 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 23:34:25,140 - INFO - Retrying request to /chat/completions in 0.406520 seconds
+2025-01-30 23:34:25,716 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 23:34:25,717 - INFO - Retrying request to /chat/completions in 0.879721 seconds
+2025-01-30 23:34:26,684 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 23:35:15,410 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 23:35:15,412 - INFO - Retrying request to /chat/completions in 0.439111 seconds
+2025-01-30 23:35:15,999 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 23:35:16,000 - INFO - Retrying request to /chat/completions in 0.963678 seconds
+2025-01-30 23:35:17,081 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 23:44:01,957 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 23:44:01,959 - INFO - Retrying request to /chat/completions in 0.486476 seconds
+2025-01-30 23:44:03,409 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

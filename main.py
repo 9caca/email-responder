@@ -2,6 +2,7 @@ import imaplib
 import email
 from email.mime.text import MIMEText
 import smtplib
+from openai import OpenAI
 import os
 import logging
 from dotenv import load_dotenv
@@ -24,9 +25,17 @@ email_user = os.getenv("EMAIL_USER")
 email_password = os.getenv("EMAIL_PASSWORD")
 imap_server = os.getenv ("IMAP_SERVER")
 imap_port = os.getenv("IMAP_PORT")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Lista de termos que indicam e-mails automáticos
 AUTO_EMAIL_INDICATORS = ["no-reply", "noreply", "automatic", "do-not-reply", "no_reply"]
+
+from openai import OpenAI
+import os
+from dotenv import load_dotenv
+
+# Carregar variáveis de ambiente
+load_dotenv()
 
 def is_auto_email(from_):
     #Verifica se o e-mail é automático com base no remetente.
